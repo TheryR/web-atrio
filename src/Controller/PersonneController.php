@@ -21,7 +21,7 @@ class PersonneController extends AbstractController
 //        $personnes = $this->getDoctrine()->getRepository('AcmeBundle:Personne')->findAll();
         return $this->render('personne/index.html.twig', [
             'controller_name' => 'PersonneController',
-            'personnes' => $this->getDoctrine()->getRepository(Personne::class)->findAll(),
+            'personnes' => $this->getDoctrine()->getRepository(Personne::class)->findAll(array(),array('last_name' => 'ASC')),
         ]);
     }
 

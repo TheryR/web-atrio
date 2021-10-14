@@ -25,7 +25,7 @@
         <ul>
             {% for personne in personnes %}
                 <li>
-                    {{ personne.first_name }} {{ personne.last_name }} {{ personne.birth_date }}
+                    {{ personne.getFirstName() }} {{ personne.getLastName() }} {{ personne.getBirthDate()|date('d/m/Y') }}
 
                 </li>
             {% endfor %}
@@ -33,5 +33,5 @@
         </ul>
 
 
-
+    <a href="{{ path('personne_new') }}">Créer une personne</a>
 {% endblock %}
