@@ -17,4 +17,21 @@
         <li>Your template at <code><a href="{{ 'C:/wamp64/www/webatrio/templates/personne/index.html.twig'|file_link(0) }}">templates/personne/index.html.twig</a></code></li>
     </ul>
 </div>
+
+    Liste des personnes
+
+
+
+        <ul>
+            {% for personne in personnes %}
+                <li>
+                    {{ personne.first_name }} {{ personne.last_name }} {{ personne.birth_date }}
+
+                </li>
+            {% endfor %}
+
+        </ul>
+
+
+
 {% endblock %}
